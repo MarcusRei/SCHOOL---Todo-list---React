@@ -1,0 +1,18 @@
+form {
+  display: flex;
+  gap: 1em;
+}
+
+.todo {
+  display: flex;
+  gap: 1em;
+}
+
+.todo:hover {
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+  color: grey;
+}
