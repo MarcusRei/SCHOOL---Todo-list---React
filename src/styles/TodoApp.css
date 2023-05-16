@@ -1,11 +1,31 @@
+.todo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 form {
   display: flex;
   gap: 1em;
 }
 
 .todo {
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 1em;
+  border-top: 1px solid grey;
+}
+
+.todo:nth-child(1) {
+  border: 0;
+}
+
+.todo__list {
+  padding: 0;
+  background-color: rgb(44, 44, 44);
+  padding: 0.1em 1em;
+  border-radius: 5px;
 }
 
 .todo:hover {

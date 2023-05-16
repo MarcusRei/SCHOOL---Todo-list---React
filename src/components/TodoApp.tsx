@@ -21,12 +21,14 @@ export const TodoApp = () => {
   }
 
   return (
-    <>
+    <div className="todo__wrapper">
+      <h1>Your todo-list</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" value={userInput} onChange={handleChange} />
         <button onClick={handleClick}>Lägg till</button>
       </form>
-      <ul>
+      <h2>Your todos</h2>
+      <ul className="todo__list">
         {todos.map((todo) => {
           return (
             <li
@@ -41,6 +43,6 @@ export const TodoApp = () => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
