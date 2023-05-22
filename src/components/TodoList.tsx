@@ -2,6 +2,7 @@ import { useContext, useReducer } from "react";
 import { TodosReducer, actionType } from "../reducers/TodosReducer";
 import { TodosContext } from "../contexts/TodosContext";
 import { TodosDispatchContext } from "../contexts/TodosDispatchContext";
+import "../styles/TodoList.css";
 
 export const TodoList = () => {
   const todos = useContext(TodosContext);
@@ -13,6 +14,7 @@ export const TodoList = () => {
         return (
           <li className="todo">
             <div
+              className="todo__inner"
               onClick={() =>
                 dispatch({ type: actionType.TOGGLED, payload: todo.id })
               }
@@ -21,6 +23,7 @@ export const TodoList = () => {
               <h2 className={todo.isDone ? "done" : ""}>{todo.text}</h2>
             </div>
             <button
+              className="remove__button"
               onClick={() => {
                 dispatch({
                   type: actionType.REMOVED,

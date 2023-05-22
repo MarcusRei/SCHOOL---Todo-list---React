@@ -1,0 +1,37 @@
+.remove__button {
+  background-color: rgb(144, 0, 0);
+  position: relative;
+  padding: 5px;
+  height: 50px;
+}
+
+.todo {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  border-top: 1px solid grey;
+}
+
+.todo__inner {
+  display: flex;
+  gap: 1em;
+}
+
+.todo:nth-child(1) {
+  border: 0;
+}
+
+.todo__list {
+  padding: 0;
+  background-color: rgb(44, 44, 44);
+  padding: 0.1em 1em;
+  border-radius: 5px;
+  min-width: 100%;
+}
+
+.todo:hover {
+  cursor: pointer;
+}
