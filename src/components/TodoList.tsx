@@ -11,14 +11,25 @@ export const TodoList = () => {
     <ul className="todo__list">
       {todos.map((todo) => {
         return (
-          <li
-            className="todo"
-            onClick={() =>
-              dispatch({ type: actionType.TOGGLED, payload: todo.id })
-            }
-          >
-            <input type="checkbox" checked={todo.isDone} />
-            <h2 className={todo.isDone ? "done" : ""}>{todo.text}</h2>
+          <li className="todo">
+            <div
+              onClick={() =>
+                dispatch({ type: actionType.TOGGLED, payload: todo.id })
+              }
+            >
+              <input type="checkbox" checked={todo.isDone} />
+              <h2 className={todo.isDone ? "done" : ""}>{todo.text}</h2>
+            </div>
+            <button
+              onClick={() => {
+                dispatch({
+                  type: actionType.REMOVED,
+                  payload: todo.id.toString(),
+                });
+              }}
+            >
+              Ta bort!
+            </button>
           </li>
         );
       })}

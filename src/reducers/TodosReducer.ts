@@ -3,6 +3,7 @@ import { Todo } from "../models/Todo";
 export enum actionType {
   ADDED,
   TOGGLED,
+  REMOVED,
 }
 
 export interface Action {
@@ -23,5 +24,8 @@ export const TodosReducer = (todos: Todo[], action: Action) => {
           return todo;
         }
       });
+
+    case actionType.REMOVED:
+      return todos.filter((todo) => todo.id.toString() !== action.payload);
   }
 };
