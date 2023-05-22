@@ -5,7 +5,7 @@ export enum actionType {
   TOGGLED,
 }
 
-interface Action {
+export interface Action {
   type: actionType;
   payload: any;
 }
